@@ -6,7 +6,7 @@
 
     var URL =$.getJSON('https://80.211.5.147/api/status');
 
-    function SleepTillUpdateDashboardList(time) {
+    function SleepTillUpdateDashboardValues(time) {
         return new Promise((resolve) => setInterval(resolve, time));
     }
 

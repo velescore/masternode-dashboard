@@ -4,6 +4,10 @@
 
 (function($) {
 
+    function SleepTillUpdateMnList(time) {
+        return new Promise((resolve) => setInterval(resolve, time));
+    }
+
     function GetMnList() {
         $.getJSON('https://explorer.veles.network/dapi/mn/list/assoc').then(function(json) {
             var tr;
@@ -41,6 +45,9 @@
     }
     try {
         GetMnList();
+        SleepTillUpdateMnList(120000).then(() => {
+            GetMnList();
+        });
     } catch (error) {
         console.log(error);
     }
