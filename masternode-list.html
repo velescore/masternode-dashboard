@@ -1,0 +1,251 @@
+<!-- 
+ Copyright (c) 2019-2020 The Veles Core developers
+ Distributed under the MIT software license, see the accompanying
+ file COPYING or http://www.opensource.org/licenses/mit-license.php
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="MN Gen 2 UI">
+    <meta name="author" content="Mdfkbtc">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+</head>
+
+<body class="">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img class="main-veles-logo" src="images/icon/logo.png" alt="Veles" />
+                    <p class="main-veles-logo-text"> Veles </p>
+                </a>    
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+                        <li class="active has-sub">
+                            <a href="masternode-list.html">
+                                <i class="fas fa-table"></i>Masternode List</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <header class="header-desktop">
+                <div class="admin-login">
+                    <a href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span>  Login</span></a>
+                </div>
+                <header class="header-mobile d-block d-lg-none">
+                    <div class="header-mobile__bar">
+                        <div class="container-fluid">
+                            <div class="header-mobile-inner">
+                                <a class="logo" href="index.html">
+                                    <img class="main-veles-logo" src="images/icon/logo.png" alt="Veles" />
+                                </a>
+                                <p class="main-veles-logo-text"> Veles </p>
+                                <button class="hamburger hamburger--slider" type="button">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar-mobile">
+                        <div class="container-fluid">
+                            <ul class="navbar-mobile__list list-unstyled">
+                                <li>
+                                    <a href="index.html">
+                                        <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="masternode-list.html">
+                                        <i class="fas fa-table"></i>Masternode List</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+            </header>
+ 
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2 class="title-1 m-b-25"><span class="grey">The </span>Masternode List</h2><br />
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-masternode-list" id="mn_list">
+                                        <thead>
+                                            <tr class="header">
+                                                <th>IP</th>
+                                                <th>Services</th>
+                                                <th>Status</th>
+                                                <th>Api Version</th>
+                                                <th>Api Latency</th>
+                                                <th>Payee</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                            <!-- Footer -->
+                        <div class="footer container">
+                            <div class="tomottoWrap text-center" id="tomotto"> “In such seconds of decision entire futures are made.”― Dan Simmons, Hyperion
+                            </div>
+                            <div class="row footer-links">
+                                <div class="section col-md-3">
+                                    <h5 class="footer-links-font">Website</h5> <a href="index.en.html">Home</a> <a href="download.en.html">Download</a> <a href="faq.en.html">FAQ</a> <a href="coin-specs.en.html">Coins-specs</a> <a href="whitepaper.en.html">Whitepaper</a> <a href="masternode-guide.en.html">Masternode guide</a> <a href="exchanges.en.html">Exchanges</a> <a href="external-services.en.html">External-services</a> <a href="crowdfundings.en.html">Crowdfundings</a> <a href="mining-pools.en.html">Mining-pools</a><a href="team.en.html">Team</a> <a href="roadmap.en.html">Roadmap</a></div>
+                                <div class="section col-md-3">
+                                            <h5 class="footer-links-font">Wallet</h5><a href="https://wallet.veles.network/">Home</a><a href="https://wallet.veles.network/#wallet">Login</a><a href="https://wallet.veles.network/#newAddress">New Address</a><a href="https://wallet.veles.network/#newSegWit">New SegWit</a><a href="https://wallet.veles.network/#newMultiSig">New MultiSig</a><a href="https://wallet.veles.network/#newTimeLocked">New TimeLocked</a><a href="https://wallet.veles.network/#newHDaddress">New HD Address</a><a href="https://wallet.veles.network/#newTransaction">New Transaction</a><a href="https://wallet.veles.network/#sign">Sign</a><a href="https://wallet.veles.network/#verify">Verify</a><a href="https://wallet.veles.network/#broadcast">Broadcast</a> </div>
+                                <div class="section col-md-3">
+                                    <h5 class="footer-links-font">Explorer</h5> <a href="https://explorer.veles.network/">Search</a> <a href="https://explorer.veles.network/richlist">Richlist</a> <a href="https://explorer.veles.network/masternodes">Masternodes</a> <a href="https://explorer.veles.network/movement">Movement</a>
+                                    <a
+                                    href="https://explorer.veles.network/miningstats">Mining-stats</a> <a href="https://explorer.veles.network/info">Api</a> </div>
+                                <div class="section col-md-3">
+                                    <h5 class="footer-links-font">Community</h5> <a href="https://twitter.com/velescore">Twitter</a> <a href="https://discord.gg/P528fGg">Discord</a> <a href="https://steemit.com/@velescore/">Steemit</a> <a href="https://bitcointalk.org/index.php?topic=5064523">Bitcointalk</a>                            <a href="https://www.coingecko.com/en/coins/veles">Coingecko</a> <a href="https://coinpaprika.com/coin/vls-veles/">Coinpaprika</a> <a href="https://coinmarketcap.com/currencies/veles/">Coinmarketcap</a> <a href="https://masternodecap.com/coins/VLS">Masternodecap</a>  </div>
+                            </div>
+                            <div class="footer-copyright text-center py-3">
+                                © Copyright MMXIX The Veles Core developers.<br />
+                                Non mihi, non tibi, sed nobis.
+                                </div>
+                            <div class="footer-badges">
+                                <img src="https://camo.githubusercontent.com/94196f0d2a07534cd6b6584cb9df02bdf4cee5db/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f76656c6573636f72652f76656c65732e7376673f7374796c653d666f722d7468652d6261646765">
+                                <img src="images/contact-addr.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->                
+        </div>
+        <div class="footer-bar">
+            <div class="footer-overlay">
+                <div class="row footer-panel-row">
+                    <div class="col-md-12">
+                         <div id="mobile-follow-toggle" class="status-area footer-follow-mobile">
+                                <span class="fa brand-color fa-share-alt" title="Veles Core console"></span>
+                                <span class="label">Follow Us</span>
+                        </div>
+                         <div class="footer-follow-wide">
+                            <ul class="osx-dock">
+                              <li class="active">
+                                <span>Bitcointalk</span>
+                                <a target="_blank" rel="noopener noreferrer" href="https://bitcointalk.org/index.php?topic=5064523">
+                                    <i class="fab fa-bitcoin"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <span>Twitter</span>
+                                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/velescore">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <span>GitHub</span>
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/velescore/veles">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <span>Discord</span>
+                                <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/P528fGg">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                              </li>
+                            </ul>
+                        </div> 
+                        <div id="panel-slide"  class="bg-carbon">
+                        <div class="slide-iconset">
+                            <a target="_blank" rel="noopener noreferrer" href="https://bitcointalk.org/index.php?topic=5064523">
+                                <i class="fab fa-bitcoin"></i>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/velescore">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/velescore/veles">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/P528fGg">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <!--
+                            <a href="https://www.coingecko.com/en/coins/veles">
+                                 <i class="fas fa-coins brand"></i>
+                            </a>
+                            -->
+                            <a target="_blank" rel="noopener noreferrer" href="https://masternodecap.com/coins/VLS">
+                                 <i class="fas fa-server brand"></i>
+                            </a>
+                            <!--
+                            <a target="_blank" rel="noopener noreferrer" href="https://coinpaprika.com/coin/vls-veles/">
+                                <i class="fas fa-pepper brand"></i>
+                            </a>
+                            -->
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </div>
+</div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script type="js/main.js"></script>
+    <script src="js/mnlist.js"></script>
+    <!-- DataTables-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"></link>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
