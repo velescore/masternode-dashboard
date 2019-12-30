@@ -1269,6 +1269,8 @@ div#mn_list_length {
     }
 }
 .header-tile {
+    position: relative;
+    overflow: hidden;
     display: inline-flex;
     background-color: #282828;
     border: none; 
@@ -1303,6 +1305,54 @@ div#mn_list_length {
 .header-tile:hover .tile-label-value {
     transform: scale(1.1);
     transition: all 1.5s ease;
+}
+.header-tile .icon {
+    display: inline-block;
+    position: absolute;
+    bottom: -26px;
+    right: 15px;
+}
+.header-tile .icon i {
+    margin: auto auto;
+    transition: all 1.0s ease;
+}
+.header-tile:hover .icon i {
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+i.icon-clients.zmdi.zmdi-account {
+    font-size: 155px;
+}
+.icon.icon-masternodes {
+    bottom: -29px!important;
+}
+.header-tile .icon i {
+    font-size: 115px;
+    color: gray;
+    opacity: .2;
+    line-height: 1;
+    vertical-align: baseline;
+}
+.header-tile .icon i {
+    font-size: 139px;
+    color: grey;
+    opacity: .2;
+    line-height: 1;
+    vertical-align: baseline;
+}
+.zmdi {
+    display: inline-block;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.zmdi-account:before {
+    content: '\f206';
+}
+.zmdi-share:before {
+    content: '\f35b';
 }
 .service-description {
     width: 100%;
