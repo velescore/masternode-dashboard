@@ -139,23 +139,27 @@
 
                     var ctx = document.getElementById("percent-chart");
                     if (ctx) {
-                        ctx.height = 200;
+                        ctx.height = 150;
                         var myChart = new Chart(ctx, {
                             type: 'doughnut',
                             data: {
                                 datasets: [{
                                     label: "Clients count",
-                                    data: [dashboard_vpn_key.client_count],
+                                    data: [dashboard_vpn_key.client_count, 10],
                                     backgroundColor: [
-                                        '#bbffaa',
-                                        '#fa4251'
+                                        '#fa4251bb',
+                                        '#bbffaabb'
                                     ],
                                     hoverBackgroundColor: [
-                                        '#bbffaa',
-                                        '#fa4251'
+                                        '#fa4251',
+                                        '#bbffaa'
                                     ],
                                     borderWidth: [
-                                        0, 0
+                                        1, 1
+                                    ],
+                                    borderColor: [
+                                        '#262626',
+                                        '#262626'
                                     ],
                                     hoverBorderColor: [
                                         'transparent',
