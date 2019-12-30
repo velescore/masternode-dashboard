@@ -107,13 +107,13 @@
 
     try {
         GetDashboardValues();
-        GetVersionValues()
+        GetVersionValues();
         GetDVPNValues();
         GetMasternodeValues();
         GetBlockchainValues();
         SleepTillUpdateDashboardValues(120000).then(() => {
             GetDashboardValues();
-            GetVersionValues()
+            GetVersionValues();
             GetDVPNValues();
             GetMasternodeValues();
             GetBlockchainValues();
@@ -121,4 +121,89 @@
     } catch (error) {
         console.log(error);
     }
+})(jQuery);
+(function($) {
+
+    function SleepTillUpdateChartValues(time) {
+        return new Promise((resolve) => setInterval(resolve, time));
+    }
+    // Percent Chart
+    function ClientsCountChart() {
+        var URL = $.getJSON('https://80.211.5.147/api/status');
+        URL.then(function(json) {
+            for (var dashboard_key in json.result) {
+                if (Object.prototype.hasOwnProperty.call(json.result, dashboard_key)) {
+                    var dashboard = json.result[dashboard_key];
+                    var dashboard_vpn = json.result['services'];
+                    var dashboard_vpn_key = dashboard_vpn['VPN'];
+
+                    var ctx = document.getElementById("percent-chart");
+                    if (ctx) {
+                        ctx.height = 200;
+                        var myChart = new Chart(ctx, {
+                            type: 'doughnut',
+                            data: {
+                                datasets: [{
+                                    label: "Clients count",
+                                    data: [dashboard_vpn_key.client_count],
+                                    backgroundColor: [
+                                        '#bbffaa',
+                                        '#fa4251'
+                                    ],
+                                    hoverBackgroundColor: [
+                                        '#bbffaa',
+                                        '#fa4251'
+                                    ],
+                                    borderWidth: [
+                                        0, 0
+                                    ],
+                                    hoverBorderColor: [
+                                        'transparent',
+                                        'transparent'
+                                    ]
+                                }],
+                                labels: [
+                                    'Clients Connected',
+                                    'Max Clients'
+                                ]
+                            },
+                            options: {
+                                maintainAspectRatio: false,
+                                responsive: true,
+                                cutoutPercentage: 55,
+                                animation: {
+                                    animateScale: true,
+                                    animateRotate: true
+                                },
+                                legend: {
+                                    display: false
+                                },
+                                tooltips: {
+                                    titleFontFamily: "Poppins",
+                                    xPadding: 15,
+                                    yPadding: 10,
+                                    caretPadding: 0,
+                                    bodyFontSize: 16
+                                }
+                            }
+                        });
+
+                    }
+                    $("#clients-connected-chart").text(dashboard_vpn_key.client_count);
+                }
+            }
+
+        });
+    }
+
+    try {
+        ClientsCountChart();
+        SleepTillUpdateDashboardValues(120000).then(() => {
+            GetDashboardValues();
+        });
+
+    } catch (error) {
+        console.log(error);
+    }
+
 })(jQuery);

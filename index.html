@@ -189,11 +189,36 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-7">
                                 <div class="service-description">
-                                    <h4 class="dashboard-text">Service description: </h4>
-                                    <span> I have fckin creepy low server ... so i prefer clients which are interested in pure SOCKS5 connection / Shadowsocks ... Imho i can offer best service</span>
-
+                                    <h3 class="dashboard-text">Service description: </h3>
+                                    <br />
+                                    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus orci odio. Vestibulum congue elit ipsum, non consequat lacus finibus nec. Proin porttitor eget purus eget suscipit. Cras vulputate sollicitudin tristique. Sed blandit, urna at ullamcorper malesuada, mauris justo pulvinar enim, ut molestie nibh est quis ligula. Etiam tempor, purus.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="clients-count-chart">
+                                    <h3 class="dashboard-text">Clients Connected / Maximum Clients</h3>
+                                    <br />
+                                    <div class="row no-gutters">
+                                        <div class="col-xl-6">
+                                            <div class="chart-note-wrap">
+                                                <div class="chart-note mr-0 d-block">
+                                                    <span class="dot dot--blue"></span>
+                                                    <span>Connected:<span class="information-label-value" id="clients-connected-chart"> </span></span>
+                                                </div>
+                                                <div class="chart-note mr-0 d-block">
+                                                    <span class="dot dot--red"></span>
+                                                    <span>Maximum:<span> -</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="percent-chart">
+                                                <canvas id="percent-chart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -356,6 +381,7 @@
     </script>
     <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
     <script src="vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
     <!-- Main JS-->
     <script src="js/main.js"></script>
     <script src="js/dashboard.js"></script>

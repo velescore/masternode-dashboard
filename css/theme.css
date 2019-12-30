@@ -1358,7 +1358,6 @@ i.icon-clients.zmdi.zmdi-account {
     width: 100%;
     margin: 0px 0 15px 0px;
     padding: 10px;
-    display: inline-flex;
     background-color: #282828;
 }
 .version-info {
@@ -1400,6 +1399,11 @@ i.icon-clients.zmdi.zmdi-account {
     margin-left: 5px;
     font-weight: bold;
     color: #e4b99cdd;
+}
+.clients-count-chart {
+    background-color: #282828;
+    padding: 10px;
+    margin: 0px 0 15px 0px;
 }
 .no-overflow {
     white-space: nowrap;
