@@ -1,0 +1,12 @@
+RewriteEngine on
+# Different languages
+RewriteRule ^([^/\.]+).en.html$ index.en.html [L]
+RewriteRule ^([^/\.]+).zh.html$ index.zh.html [L]
+RewriteRule ^([^/\.]+).es.html$ index.es.html [L]
+RewriteRule ^([^/\.]+).tc.html$ index.tc.html [L]
+
+# Default languages
+RewriteRule ^([^/\.]+).html$ index.en.html [L]
+
+# Old website redirects
+Redirect 301 /dashboard.en.html /index.en.html
