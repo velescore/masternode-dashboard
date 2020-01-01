@@ -200,102 +200,10 @@
         });
     }
     
-    function VpnTrafficChart() {
-        URL.then(function(json) {
-            for (var dvpn_key in json.result) {
-                if (Object.prototype.hasOwnProperty.call(json.result, dvpn_key)) {
-                    var dvpn = json.result[dvpn_key];
-                    var dvpn_atr = json.result['services'];
-                    var dvpn_atr_key = dvpn_atr['VPN'];
-                    var traffic_key = dvpn_atr_key['metrics'];
-                    var traffic_daily = traffic_key['daily'];
-                    var traffic_hourly = traffic_key['hourly'];
-
-                    //Traffic Chart
-                    var ctx = document.getElementById("vpn-traffic-chart");
-                    if (ctx) {
-                      ctx.height = 120;
-                      var myChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                          labels: ['10', '20', '30', '40', '50', '60'],
-                          type: 'line',
-                          datasets: [{
-                            label: 'bytes in',
-                              data: [traffic_daily.bytes_in],
-                              borderColor: '#fa425188',
-                              backgroundColor: 'transparent'
-                            }, {
-                              label: 'bytes out',
-                              data: [traffic_daily.bytes_out],
-                              borderColor: '#bbffaa88',
-                              backgroundColor: 'transparent'
-                          },]
-                        },
-                        options: {
-
-                          maintainAspectRatio: false,
-                          legend: {
-                            display: false
-                          },
-                          responsive: true,
-                          tooltips: {
-                            mode: 'index',
-                            titleFontSize: 12,
-                            titleFontColor: 'white',
-                            bodyFontColor: 'white',
-                            backgroundColor: '#333bb',
-                            titleFontFamily: '',
-                            bodyFontFamily: '',
-                            cornerRadius: 3,
-                            intersect: false,
-                          },
-                          scales: {
-                            xAxes: [{
-                              gridLines: {
-                                color: 'transparent',
-                                zeroLineColor: 'transparent'
-                              },
-                              ticks: {
-                                fontSize: 2,
-                                fontColor: 'transparent'
-                              }
-                            }],
-                            yAxes: [{
-                              display: false,
-                              ticks: {
-                                display: false,
-                              }
-                            }]
-                          },
-                          title: {
-                            display: false,
-                          },
-                          elements: {
-                            line: {
-                              borderWidth: 1
-                            },
-                            point: {
-                              radius: 4,
-                              hitRadius: 10,
-                              hoverRadius: 4
-                            }
-                          }
-                        }
-                      });
-                    }
-                    
-                }
-            }
-        });
-    }
-
     try {
         ClientsCountChart();
-        VpnTrafficChart();
         SleepTillUpdateChartValues(120000).then(() => {
             ClientsCountChart();
-            VpnTrafficChart();
         });
 
     } catch (error) {

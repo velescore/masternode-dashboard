@@ -153,8 +153,8 @@ section {
 @media (max-width:767px) {
     section {
         padding-top: 30px;
-        padding-left: 0px!important;
-        padding-right: 0px!important;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
         padding-bottom: 30px;
     }
 }
