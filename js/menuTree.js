@@ -18,4 +18,8 @@ var menuTree = [
 		],
 		'hideFromNav': true,
 	},
+	{
+		'page': 'login',
+		'title': 'Login'
+	}
 ];

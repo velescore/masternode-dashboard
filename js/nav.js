@@ -425,9 +425,7 @@ var velesSinglePageApp = {
 
             if ((($('body').width()-$('#content').width()) / 2) < ($('body').width() * 0.2)) {
                 $('#content').css('padding-left', this.sidebarLeftPadContent+'px');
-                $('#content').css('padding-right','30px');
             } else {
-                $('#content-wrapper').css('padding-left', 'unset');
                 $('#content-wrapper').css('padding-left', 'unset');
             }
         }

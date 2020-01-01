@@ -38,11 +38,12 @@
 <body class="with-overlay">
 
    <nav class="navbar fixed-top navbar-expand-lg navbar-darker bg-darker fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.en.html" title="Homepage">
                 <img id="icon" src="favicon.ico"></img>
                 <div id="brand-text"> Veles</div>
             </a>
+            
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <i class="fas fa-bars"></i>
@@ -106,8 +107,14 @@
             </div>
         </div>
     </div>
-<div id="content-wrapper">
-    <div id="content" class="index-page">
+    <div id="mobile-menu-overlay">
+        <div class="overlay-shadow">
+            <div class="mobile-menu-under container"></div>
+            <div class="mobile-menu-under2 container"></div>
+        </div>
+    </div>
+    <div id="content-wrapper">
+        <div id="content" class="dashboard-page">
             <!-- MAIN CONTENT-->
                 <div class="container-fluid">
                     <div class="row">
@@ -117,7 +124,6 @@
                             </div>
                         </div>
                     </div>
-                    <br/>
                     <section>
                         <div class="row">
                             <div class="col-md-3">
@@ -257,12 +263,16 @@
                             <div class="col-md-5">
                                 <div class="traffic-info">
                                     <h3 class="dashboard-text"><i class="zmdi zmdi-chart"></i> Traffic stats</h3><br/>
-                                    <h5 class="dashboard-text">Daily</h5>
-                                    <p>Sent daily:<span class="information-label-value" id="dvpn-traffic-sent-daily"> </span></p>
-                                    <p>Received daily:<span class="information-label-value convert-bytes" id="dvpn-traffic-received-daily"> </span></p>
-                                    <h5 class="dashboard-text">Hourly</h5>
-                                    <p>Sent hourly:<span class="information-label-value" id="dvpn-traffic-sent-hourly"> </span></p>
-                                    <p>Received hourly:<span class="information-label-value" id="dvpn-traffic-received-hourly"> </span></p>
+                                    <div class="traffic-label">
+                                        <h5 class="dashboard-text">Daily</h5>
+                                        <p>Sent daily:<span class="information-label-value" id="dvpn-traffic-sent-daily"> </span></p>
+                                        <p>Received daily:<span class="information-label-value convert-bytes" id="dvpn-traffic-received-daily"> </span></p>
+                                    </div>
+                                    <div class="traffic-label">
+                                        <h5 class="dashboard-text">Hourly</h5>
+                                        <p>Sent hourly:<span class="information-label-value" id="dvpn-traffic-sent-hourly"> </span></p>
+                                        <p>Received hourly:<span class="information-label-value" id="dvpn-traffic-received-hourly"> </span></p>
+                                    </div>
                                 <!-- RECENT REPORT 2-->
                                     <div class="vpn-traffic__chart">
                                         <canvas id="vpn-traffic-chart"></canvas>
@@ -372,9 +382,7 @@
 
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
-    <!-- DataTables-->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-    <!-- Bootstrap JS-->
+    
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
     <!-- Vendor JS       -->
@@ -383,7 +391,6 @@
     <script src="vendor/counter-up/jquery.counterup.min.js"></script>
     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
     <!-- Main JS-->
-    <script src="js/mnlist.js"></script>
     <script src="js/main.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/dashboard.js"></script>

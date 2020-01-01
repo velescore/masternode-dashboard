@@ -141,32 +141,46 @@ a:hover{
     color:#f19b7e;
     text-decoration:underline
 }
-section{
-    position:relative
-}
 div.logo a{
     display: inherit;
 }
-.section__content{
-    position:relative;
-    margin:0 auto;
-    z-index:1
+section {
+    width: 100%;
+    padding: 30px 35px 35px 35px;
+    background-image: linear-gradient(180deg,   #e4b99c22, #6f6158);
+    overflow-x: hidden;
 }
-.section__content--w1830{
-    max-width:1830px
-}
-.section__content--p30{
-    padding:0 30px
-}
-@media (max-width:991px){
-    .section__content--p30{
-        padding:0
+@media (max-width:767px) {
+    section {
+        padding-top: 30px;
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+        padding-bottom: 30px;
     }
 }
-.section__content--p35{
-    padding:0 35px
+section:nth-child(even) {
+    background-image: linear-gradient(180deg,   transparent, #383737);  /* #26262622 */
 }
-@media (min-width:1200px){
+section::after {
+    content: " ";
+    position: absolute;
+    margin-top: 58px;
+    right: calc(50% - 5px);
+    margin-left: -5px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: #6f6158 transparent transparent transparent;
+}
+section:nth-child(odd)::after {
+    border: none;
+}
+section:nth-child(even)::after {
+    border-color: #383737 transparent transparent transparent;
+}
+section:last-child::after {
+    border: none;
+}
+@media (min-width:1200px) {
     .container{
         max-width:1320px
     }
@@ -188,16 +202,6 @@ div.logo a{
         position:relative;
         top:88px;
         padding-left:0
-    }
-}
-.main-content{
-    background:url(../images/bg-pattern.png);
-        padding-top: 2%;
-    min-height:100vh
-}
-@media (max-width:991px){
-    .main-content{
-        padding-top:35px
     }
 }
 .login-wrap{
@@ -380,38 +384,6 @@ div.logo a{
 }
 .card{
     margin-bottom:30px
-}
-.header-desktop{
-    background:#000;
-    -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
-    -moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
-    box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
-    border-bottom:#1b1810;
-    position:fixed;
-    top:0;
-    right:0;
-    left:255px;
-    height:75px;
-    z-index:3;
-    text-align:right;
-}
-.header-desktop .section__content{
-    overflow:visible;
-    position:absolute;
-    top:50%;
-    left:0;
-    right:0;
-    -webkit-transform:translateY(-50%);
-    -moz-transform:translateY(-50%);
-    -ms-transform:translateY(-50%);
-    -o-transform:translateY(-50%);
-    transform:translateY(-50%)
-}
-@media (max-width:991px){
-    .header-desktop{
-        top:0;
-        left:0;
-    }
 }
 #tomotto{
     color:#fff;
@@ -924,6 +896,7 @@ i.icon-clients.zmdi.zmdi-account {
     content: '\f35b';
 }
 .service-description {
+    min-height: 94%;
     width: 100%;
     margin: 0px 0 15px 0px;
     padding: 20px;
@@ -956,6 +929,10 @@ i.icon-clients.zmdi.zmdi-account {
     min-height: 25vh;
     background-color: #282828;
     padding: 20px;
+}
+.traffic-label {
+    display: inline-block;
+    min-width: 49%;
 }
 .dvpn-info {
     min-height: 25vh;
@@ -1037,7 +1014,7 @@ i.icon-clients.zmdi.zmdi-account {
     opacity: 0;
 }
 .sidebar:hover, .sidebar.sidebar-expand {
-    width: 17%;
+    width: 19%;
     background-color: #000000dd;
     border-top: 0;
     border-bottom: 0;
@@ -1136,6 +1113,11 @@ i.icon-clients.zmdi.zmdi-account {
 }
 body.with-overlay {
     margin: 0; height: 100%; overflow: hidden;
+}
+@media only screen and (min-width: 1400px) {
+    body {
+        transform: scale(calc(100vw/1505px));
+    }
 }
 /* mobile menu overlay */
 #mobile-menu-overlay {
@@ -1268,8 +1250,8 @@ body.with-overlay {
     padding: 0 16px;
 }
 div#languageSelectorBar {
-    position: absolute;
-    right: 50px;
+    position: relative;
+    max-width: 12%;
 }
 .language-selector img {
     height: 20px;
