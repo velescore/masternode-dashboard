@@ -428,6 +428,15 @@ var velesSinglePageApp = {
             } else {
                 $('#content-wrapper').css('padding-left', 'unset');
             }
+            $('#footer-content').css('padding-left', 0);
+            this.sidebarLeftPadContent = (($('body').width() * 0.2) - 20 - (($('body').width()-$('#content').width()) / 2));
+
+            if ((($('body').width()-$('#footer-content').width()) / 2) < ($('body').width() * 0.2)) {
+                $('#footer-content').css('padding-left', this.sidebarLeftPadContent+'px');
+            } else {
+                $('#footer-wrapper').css('padding-left', 'unset');
+            }
+
         }
     },
 
