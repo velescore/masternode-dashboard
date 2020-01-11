@@ -13,13 +13,11 @@ var menuTree = [
 	{
 		'page': 'index',
 			'items': [
+				{ 'title': 'Login' },
 		 		{ 'title': 'Dashboard' },
 		 		{ 'title': 'Masternode List'}
 		],
 		'hideFromNav': true,
 	},
-	{
-		'page': 'login',
-		'title': 'Login'
-	}
+	
 ];

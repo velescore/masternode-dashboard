@@ -1,11 +1,10 @@
 var velesSinglePageApp = {
-    'explorerUrl': 'http://35.240.96.108:88',
     'currentPage': null,
     'language': 'en',
     'defaultLanguage': 'en',
     'pageSuffix': '.html',
     'pageHooks': {},
-    'cachedPages': {'en': {}, 'zh': {}, 'es':{}, 'tc':{}},
+    'cachedPages': {'en': {}},
     'eventsBound': {},
     'menuTreeIndex': {},
     'menuTemplates': {},
@@ -156,7 +155,6 @@ var velesSinglePageApp = {
             page = this.currentPage;
 
         $('.nav-active').removeClass('nav-active'); // deactivate previously active tabs
-
         if (page == 'index')    // main index link is a special one
             $('a.navbar-brand').addClass('nav-active');
 
@@ -375,7 +373,7 @@ var velesSinglePageApp = {
                 this.sidebarResizePage();
 
         } else {
-            this.sidebarCollapse();
+            this.sidebarExpand();
         }
     },
 

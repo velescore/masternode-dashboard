@@ -98,4 +98,4 @@
     } catch (error) {
       console.log(error);
     }
-})(jQuery);
+})(jQuery);    

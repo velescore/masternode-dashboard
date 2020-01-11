@@ -156,7 +156,7 @@
                                         '#bbffaa'
                                     ],
                                     borderWidth: [
-                                        1, 1
+                                        2, 2
                                     ],
                                     borderColor: [
                                         '#262626',
@@ -175,7 +175,7 @@
                             options: {
                                 maintainAspectRatio: false,
                                 responsive: true,
-                                cutoutPercentage: 55,
+                                cutoutPercentage: 80,
                                 animation: {
                                     animateScale: true,
                                     animateRotate: true
@@ -184,9 +184,9 @@
                                     display: false
                                 },
                                 tooltips: {
-                                    xPadding: 15,
-                                    yPadding: 10,
-                                    caretPadding: 0,
+                                    xPadding: 5,
+                                    yPadding: 5,
+                                    caretPadding: 10,
                                     bodyFontSize: 16
                                 }
                             }
