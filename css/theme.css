@@ -841,7 +841,7 @@ div#mn_list_length {
     position: relative;
     overflow: hidden;
     display: inline-flex;
-    background-color: #282828;
+    background-color: #262626bb;
     border: none; 
     border-bottom: none;
     border-left: none;
@@ -859,7 +859,7 @@ div#mn_list_length {
 .header-tile .tile-label-value {
     display: block;
     font-weight: bold;
-    color: #e4b99cdd;
+    color: #F19B7Edd;
     transition: all 1.0s ease;
 }
 .header-tile:hover {
@@ -924,6 +924,7 @@ i.icon-clients.zmdi.zmdi-account {
     content: '\f35b';
 }
 #map {
+    opacity: 0.7;
     border-radius:3px;
     pointer-events: none;
     width: 100%;
@@ -935,9 +936,8 @@ i.icon-clients.zmdi.zmdi-account {
     max-height: 500px;
 }
 .map-layout {
-    padding: 10px;
     width: 100%;
-    background-color: #282828;
+    background-color: #262626bb;
     margin: 0px 0 15px 0px;
 
 }
@@ -945,11 +945,11 @@ i.icon-clients.zmdi.zmdi-account {
     width: 100%;
     margin: 0px 0 15px 0px;
     padding: 20px;
-    background-color: #282828;
+    background-color: #262626bb;
 }
 .version-info {
     display: inline-flex;
-    background-color: #282828;
+    background-color: #262626bb;
     padding: 10px;
     width: 100%;
     margin: 15px 0 15px 0px;
@@ -961,18 +961,18 @@ i.icon-clients.zmdi.zmdi-account {
 }
 .masternode-info {
     min-height: 25vh;
-    background-color: #282828;
+    background-color: #262626bb;
     padding: 20px;
     margin-bottom: 15px;
 }
 .blockchain-info {
     min-height: 25vh;
-    background-color: #282828;
+    background-color: #262626bb;
     padding: 20px;
 }
 .traffic-info {
     min-height: 25vh;
-    background-color: #282828;
+    background-color: #262626bb;
     padding: 20px;
 }
 .traffic-label {
@@ -981,7 +981,7 @@ i.icon-clients.zmdi.zmdi-account {
 }
 .dvpn-info {
     min-height: 25vh;
-    background-color: #282828;
+    background-color: #262626bb;
     padding: 20px 20px 0px 20px;
     margin-bottom: 15px;
 }
@@ -994,18 +994,18 @@ i.icon-clients.zmdi.zmdi-account {
     text-align: right;
     margin-left: 5px;
     font-weight: bold;
-    color: #e4b99cdd;
+    color: #F19B7Edd;
 }
 .chart-info {
     margin-bottom: 20px;
     display: inline-block;
 }
 .client-active {
-    color: #fa4251;
+    color: #fa4251bb;
     font-weight: bold;
 }
 .client-maximum {
-    color: #bbffaa;
+    color: #bbffaabb;
     font-weight: bold;
 }
 .col-xs-3.clients-status {
@@ -1019,7 +1019,7 @@ i.icon-clients.zmdi.zmdi-account {
     padding-left: 10px;
 }
 .clients-count-chart {
-    background-color: #282828;
+    background-color: #262626bb;
     padding: 20px;
     margin: 0px 0 15px 0px;
 }
