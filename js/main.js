@@ -1,10 +1,25 @@
-// Copyright (c) 2019-2020 The Veles Core developers
-// Distributed under the MIT software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php
-
+/*
+ * Main masternode dashboard functionality
+ *
+ * Copyright (C) 2020 The Veles Core developers
+ * Author: mdfkbtc
+ *
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ */
 (function($) {
 
-    var URL =$.getJSON('https://80.211.5.147/api/status');
+    // Either connect to API of current host where dashboard is running,
+    // or fetch random MN information when developing on localhost
+    if (document.location.host == 'localhost') {
+        var URL = $.getJSON('https://explorer.veles.network/dapi/status');
+    } else {
+        var URL = $.getJSON(
+            document.location.protocol + '://' + document.location.host + '/api/status'
+            );
+    }
 
     function SleepTillUpdateValues(time) {
         return new Promise((resolve) => setInterval(resolve, time));
