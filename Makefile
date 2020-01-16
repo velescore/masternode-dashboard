@@ -15,5 +15,7 @@ init:
 	$(PIP_CMD) install -r requirements.txt --user
 
 test:
+	@echo "Building HTML ..."
+	@make build
 	@echo "Validating HTML ..."
 	$(PYTHON_CMD) tests/test_valid_html.py
