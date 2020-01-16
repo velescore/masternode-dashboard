@@ -31,8 +31,8 @@
                 Quis custodiet ipsos custodes
             </div>
             <div class="footer-badges">
-                <img src="https://camo.githubusercontent.com/94196f0d2a07534cd6b6584cb9df02bdf4cee5db/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f76656c6573636f72652f76656c65732e7376673f7374796c653d666f722d7468652d6261646765">
-                <img src="images/contact-addr.svg">
+                <img src="https://camo.githubusercontent.com/94196f0d2a07534cd6b6584cb9df02bdf4cee5db/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f76656c6573636f72652f76656c65732e7376673f7374796c653d666f722d7468652d6261646765" alt="Latest Veles Core version">
+                <img src="images/contact-addr.svg" alt="Contact">
             </div>
         </div>
         <div id=footer-wrapper>
@@ -73,12 +73,12 @@
                 </div>
             </div>
         </div>
-
-{% for js in body.js -%}
+    <!-- JS includes -->
+{%- for js in body.js %}
     <script src="{{js.src}}"></script>
     {%- if 'comment' in js -%}
     <!-- // {{js.comment}} --> 
-    {%- endif %}
-{% endfor %}
+    {%- endif -%}
+{% endfor -%}
 </body>
 </html>

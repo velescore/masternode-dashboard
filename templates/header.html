@@ -25,18 +25,22 @@
     of the License, or (at your option) any later version.
     -->
     <meta charset="UTF-8">
-    <meta page_name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta page_name="description" content="Veles Masternode Dashboard">
-    <meta page_name="author" content="The Veles Core developers">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="Veles Masternode Dashboard">
+    <meta name="author" content="The Veles Core developers">
     <title>Masternode Dashboard</title>
     <script data-pace-options='{ "eventLag": false, "restartOnPushState": false }' src="js/pace.js"></script>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-
-    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet" media="all"></script><!-- // Font Awesome v5 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" media="all"></script><!-- // Material Design Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" media="all"></script><!-- // Bootstrap -->
-    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" rel="stylesheet" media="all"></script><!-- // DataTables -->
-    <link href="css/theme.css" rel="stylesheet" media="all"></script>
+    <!-- CSS includes -->
+{%- for css in body.css %}
+    <link href="{{css.href}}"
+        {%- if css.rel %} rel="{{css.rel}}" {% else %} rel="stylesheet" {% endif -%}
+        {%- if css.media %} media="{{css.media}}" {% endif -%}
+        >
+    {%- if 'comment' in css -%}
+        <!-- // {{css.comment}} --> 
+    {%- endif -%}
+{% endfor %}
 </head>
 
 <body>
@@ -44,7 +48,7 @@
    <nav class="navbar fixed-top navbar-expand-lg navbar-darker bg-darker fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#dashboard" title="Homepage">
-                <img id="icon" src="favicon.ico"></img>
+                <img id="icon" src="favicon.ico" alt="Veles Masternode">
                 <div id="brand-text"> Veles <span style="font-weight: lighter;">Masternode</span></div>
             </a>
             
@@ -78,7 +82,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown language-selector">
                         <a class="nav-link dropdown-toggle" href="index.en.html" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="current-language">English</span> <img src="./images/lang.png"/>
+                            <span class="current-language">English</span> <img src="./images/lang.png" alt="Language"/>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
                             <a class="dropdown-item nav-external-app" href="index.zh.html">简体中文</a>
