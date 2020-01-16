@@ -6,10 +6,11 @@ and administration of the masternode.
 You can try the Masternode Dashboard web UI visiting [this link](https://velescore.github.io/masternode-dashboard/public/index.html)
 hosted on github.io.
 
-## Development
+### Method 2
 For local testing and development you can clone this repository to your webroot and compile the page
 by running following command from within the projects's directory:
-
+```make```
+or alternatively
 ```./manage.py rebuild index```
 
 Now you can point your browser to file `public/index.html` (URL depends on the settings of your webserver) 
