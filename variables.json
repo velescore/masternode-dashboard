@@ -36,5 +36,10 @@
 			"title": "Masternode List",
 			"on_sidebar": true
 		}
+	},
+	"app": {
+		"version": "0.0.02",
+		"copyright_year": 2020,
+		"copyright_year_roman": "MMXX"
 	}
 }
