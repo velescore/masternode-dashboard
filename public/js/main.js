@@ -241,4 +241,21 @@
     } catch (error) {
         console.log(error);
     }
+
+    masternodeDashboardApp.addGoHook('#dashboard', function() {
+        GetDashboardValues();
+        GetVersionValues();
+        ClientsCountChart();
+    });
+    masternodeDashboardApp.addGoHook('#services', function() {
+        GetDVPNValues();
+        GetMasternodeValues();
+        GetBlockchainValues();
+        GetVersionValues();
+    });
+    masternodeDashboardApp.addGoHook('#masternode-list', function() {
+        GetMnList();
+    });
+
+
 })(jQuery);
