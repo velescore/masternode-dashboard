@@ -1,0 +1,148 @@
+{#
+    Dashboard page content
+
+    Copyright (C) 2019 - 2020 The Veles Core developers
+    Author: mdfkbtc, Altcoin Baggins
+    Project:    Veles Core Masternode
+    Package:    Masternode Dashboard
+
+    This program is free software: you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation, either version 3
+    of the License, or (at your option) any later version.
+#}
+            <section>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="dashboard-buttons">
+                                <div class="dashboard-section-button">
+                                    <a href=#>Overview</a>
+                                </div>
+                                <div class="dashboard-section-button">
+                                    <a href=services-info.html>Services Info</a>
+                                </div>
+                                <div class="dashboard-section-button">
+                                    <a href=#>Hosts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="header-tile">
+                                    <div class="tile-label">
+                                        Masternode Status
+                                        <span class="tile-label-value" id="masternode-status">
+                                            -
+                                        </span>
+                                    </div>
+                                    <div class="icon icon-masternodes">
+                                        <i class="zmdi zmdi-dns"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="header-tile">
+                                    <div class="tile-label">
+                                        d-VPN status
+                                        <span class="tile-label-value" id="dvpn-status">
+                                            -
+                                        </span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-share"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="header-tile">
+                                    <div class="tile-label">
+                                        Clients Connected
+                                        <span class="tile-label-value" id="clients-connected">
+                                            -
+                                        </span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-clients zmdi zmdi-account"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="header-tile">
+                                    <div class="tile-label">
+                                        Latest Block
+                                        <span class="tile-label-value" id="latest-block">
+                                            -
+                                        </span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-layers"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="version-info">
+                                    <div class="col-sm-3">
+                                        <p>Masternode version: <span class="information-label-value" id="version-masternode"> </span></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p>Wallet version: <span class="information-label-value" id="version-wallet"> </span></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p>Api version: <span class="information-label-value" id="version-api"> </span></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p>Protocol version: <span class="information-label-value" id="version-protocol"> </span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                            <div class="col-md-5">
+                                <div class="clients-count-chart">
+                                    <h3 class="dashboard-text"><i class="zmdi zmdi-accounts-alt"></i> Clients Connected / Maximum Clients</h3>
+                                    <br />
+                                    <div class="row no-gutters">
+                                        <div class="col-xl-1"></div>
+                                        <div class="col-xl-4 text-center">
+                                            <div class="chart-info">
+                                                <div class="col-xs-3 clients-status">
+                                                <span class="information-label-value clients-chart-values" id="clients-connected-chart">- </span>
+                                                <span class="client-active">Active</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart-info">    
+                                                <div class="col-xs-3 clients-status-1">
+                                                <span class="information-label-value clients-chart-values"> 10</span>
+                                                <span class="client-maximum">Maximum</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2"></div>
+                                        <div class="col-xl-4">
+                                            <div class="percent-chart">
+                                                <canvas id="percent-chart"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-1"></div>
+                                    </div>
+                                </div>
+                                <div class="service-description">
+                                    <h3 class="dashboard-text"><i class="zmdi zmdi-border-color"></i> Service description: </h3>
+                                    <br />
+                                    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus orci odio. Vestibulum congue elit ipsum, non consequat lacus finibus nec. Proin porttitor eget purus eget suscipit. Cras vulputate sollicitudin tristique. Sed blandit, urna at ullamcorper malesuada, mauris justo pulvinar enim, ut molestie nibh est quis ligula. Etiam tempor, purus.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="map-layout">
+                                    <div id="map">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
