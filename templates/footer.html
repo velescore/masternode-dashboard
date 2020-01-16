@@ -73,12 +73,12 @@
                 </div>
             </div>
         </div>
-
-{% for js in body.js -%}
+    <!-- JS includes -->
+{%- for js in body.js %}
     <script src="{{js.src}}"></script>
     {%- if 'comment' in js -%}
     <!-- // {{js.comment}} --> 
-    {%- endif %}
-{% endfor %}
+    {%- endif -%}
+{% endfor -%}
 </body>
 </html>
