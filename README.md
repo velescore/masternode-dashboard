@@ -2,7 +2,11 @@
 This dashboard web-application is part of the Veles Core Masternode and provides web-based UI for monitoring
 and administration of the masternode.
 
-## How to use
+## Demo preview
+You can try the Masternode Dashboard web UI visiting [this link](https://velescore.github.io/masternode-dashboard/public/index.html)
+hosted on github.io.
+
+## Development
 For local testing and development you can clone this repository to your webroot and compile the page
 by running following command from within the projects's directory:
 
