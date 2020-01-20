@@ -11,7 +11,7 @@ modify it under the terms of the GNU General Public License
 as published by the Free Software Foundation, either version 3
 of the License, or (at your option) any later version.
 """
-import os, json
+import os, json, codecs
 
 from app.view import DashboardIndexView
 
@@ -23,7 +23,7 @@ class DashboardPageBuilder(object):
         self.page_extension = page_extension
 
     def save_result(self, page, result):
-        with open('{}.{}'.format(os.path.join(self.path, 'public', page), self.page_extension), 'w') as fh:
+        with codecs.open('{}.{}'.format(os.path.join(self.path, 'public', page), self.page_extension), 'w', 'utf-8') as fh:
             fh.write(result)
 
     def load_static_vars(self, path):
