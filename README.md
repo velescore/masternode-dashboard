@@ -1,3 +1,7 @@
+![Master Build Status](https://img.shields.io/travis/velescore/masternode-dashboard/master?style=for-the-badge) ![Latest 
+Release](https://img.shields.io/static/v1?label=Release&message=unreleased&color=blue&style=for-the-badge) 
+![Licence](https://img.shields.io/github/license/velescore/masternode-dashboard?color=blue&style=for-the-badge)
+
 # Veles Masternode Dashboard
 This dashboard web-application is part of the Veles Core Masternode and provides web-based UI for monitoring
 and administration of the masternode.
