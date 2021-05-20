@@ -129,7 +129,7 @@
 
                     var ctx = document.getElementById("percent-chart");
                     if (ctx) {
-                        ctx.height = 150;
+                        ctx.height = 50;
                         var myChart = new Chart(ctx, {
                             type: 'doughnut',
                             data: {
