@@ -6,6 +6,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Jura:300,400,600,700);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:300,400,600,700);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700');
 *{
     font-family:Jura;
     margin:0;
@@ -99,6 +100,9 @@ div.logo a{
     background-color: #f7f7f7;
     border-radius: 15px;
     padding-bottom: 2%;
+}
+.section-flex {
+    display: flex;
 }
 section {
     width: 100%;
@@ -470,9 +474,18 @@ i.icon-clients.zmdi.zmdi-account {
     padding: 30px 10px 0px 5px;
 }
 .dashboard-text{
+    font-family: 'Roboto', sans-serif;
     color: #c8a48b;
     margin-bottom: 15px;
     margin-right: 5px;
+}
+.dashboard-text-title{
+    font-family: 'Jura', sans-serif;
+    color: #c8a48b;
+    margin-bottom: 22px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 25px;
 }
 .dashboard-text-client{
     margin-top: 5px;
@@ -493,7 +506,7 @@ i.icon-clients.zmdi.zmdi-account {
     font-weight: bold;
 }
 .client-maximum {
-    color: #bbffaabb;
+    color: #4bd264;
     font-weight: bold;
 }
 .col-xs-3.clients-status {
@@ -533,8 +546,9 @@ i.icon-clients.zmdi.zmdi-account {
     background-color: transparent;
     border-top: 0;
     border-bottom: 0;
-    margin-top: 62px;
-    margin-bottom: 39px
+    margin-top: 110px;
+    margin-bottom: 39px;
+    font-size: 22px;
 }
 .sidebar ul {
     list-style: none;
@@ -542,7 +556,7 @@ i.icon-clients.zmdi.zmdi-account {
 .sidebar a {
     text-decoration:none;
     color:#1f1d1c;
-    line-height: 50px;
+    line-height: 52px;
     padding: 0 20px;
     display:block;
 }
@@ -600,21 +614,29 @@ body.with-overlay {
     border-radius: 15px;
 }
 #icon {
-    width: 55px;
+    position: absolute;
+    right: 47%;
+    width: 82px;
+    top: -15px;
+}
+.nav-flex {
+    display: flex;
 }
 .navbar-brand {
-    padding: 11px 14px 9px 4px;
+    padding: 0px 15px 0px 15px;
     font-weight: bold;
     color: #1f1d1c;
-    font-size: 21px;
     border-bottom: 2px solid transparent;
-    margin-top: 2px;
-    height: 59px;
+    position: absolute;
+    left: -10px;
+}
+div#navbar-responsive{
+    position: absolute;
+    right: 0;
 }
 div#brand-text {
-    font-size: 1.32rem;
+    font-size: 30px;
     display: inline;
-    margin-inline-start: 0.02rem;
 }
 .nav-link {
     color: #1f1d1c;
@@ -645,7 +667,6 @@ div#brand-text {
 }
 li.nav-item {
     border-bottom: 2px solid transparent;
-    padding: 8px 0 5px 0;
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }

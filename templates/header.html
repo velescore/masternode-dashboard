@@ -46,40 +46,36 @@
 <body>
 
    <nav class="navbar navbar-expand-lg">
-            <div class="col-md-2">
-                <a class="navbar-brand" href="#dashboard" title="Homepage">
-                    <div id="brand-text"> Veles <span style="font-weight: lighter;">Masternode</span></div>
-                </a>
-            </div>
-            <div class="col-md-8 text-center">
-                <img id="icon" src="images/icon/logo.png" alt="Veles Masternode">
-            </div>
-            <div class="col-md-2">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <i class="fas fa-bars"></i>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
+        <div class="col-md-12 nav-flex">
+            <a class="navbar-brand" href="#dashboard" title="Homepage">
+                <div id="brand-text"> VELES <span style="font-weight: lighter;font-size: 30px;">| MASTERNODE</span></div>
+            </a>
+            <img id="icon" src="images/icon/logo.png" alt="Veles Masternode">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
 {%- for page_name, item in pages.items() -%}
     {% if item.on_nav %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="#{{page_name}}">{{item.title}}</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#{{page_name}}">{{item.title}}</a>
+                    </li>
+    {%- endif -%}
+{%- endfor %}
+                </ul>
+                <div class="sidebar sidebar-expand">
+                    <h4 data-id="page.title"></h4>
+                    <ul>
+{%- for page_name, item in pages.items() -%}
+    {% if item.on_sidebar %}
+                        <li class="menu-item"><a class="sidebar-link" href="#{{page_name}}"><span>{{item.title}}</span></a></li>
     {%- endif -%}
 {%- endfor %}
                     </ul>
-                    <div class="sidebar sidebar-expand">
-                        <h4 data-id="page.title"></h4>
-                        <ul>
-{%- for page_name, item in pages.items() -%}
-    {% if item.on_sidebar %}
-                            <li class="menu-item"><a class="sidebar-link" href="#{{page_name}}"><span>{{item.title}}</span></a></li>
-    {%- endif -%}
-{%- endfor %}
-                        </ul>
-                    </div>
                 </div>
             </div>
+        </div>
     </nav>

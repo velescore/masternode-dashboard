@@ -29,36 +29,32 @@
 <body>
 
    <nav class="navbar navbar-expand-lg">
-            <div class="col-md-2">
-                <a class="navbar-brand" href="#dashboard" title="Homepage">
-                    <div id="brand-text"> Veles <span style="font-weight: lighter;">Masternode</span></div>
-                </a>
-            </div>
-            <div class="col-md-8 text-center">
-                <img id="icon" src="images/icon/logo.png" alt="Veles Masternode">
-            </div>
-            <div class="col-md-2">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <i class="fas fa-bars"></i>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#login">Administrator Login</a>
-                        </li>
+        <div class="col-md-12 nav-flex">
+            <a class="navbar-brand" href="#dashboard" title="Homepage">
+                <div id="brand-text"> VELES <span style="font-weight: lighter;font-size: 30px;">| MASTERNODE</span></div>
+            </a>
+            <img id="icon" src="images/icon/logo.png" alt="Veles Masternode">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#login">Administrator Login</a>
+                    </li>
+                </ul>
+                <div class="sidebar sidebar-expand">
+                    <h4 data-id="page.title"></h4>
+                    <ul>
+                        <li class="menu-item"><a class="sidebar-link" href="#login"><span>Administrator Login</span></a></li>
+                        <li class="menu-item"><a class="sidebar-link" href="#dashboard"><span>Dashboard</span></a></li>
+                        <li class="menu-item"><a class="sidebar-link" href="#masternode-list"><span>Masternode List</span></a></li>
                     </ul>
-                    <div class="sidebar sidebar-expand">
-                        <h4 data-id="page.title"></h4>
-                        <ul>
-                            <li class="menu-item"><a class="sidebar-link" href="#login"><span>Administrator Login</span></a></li>
-                            <li class="menu-item"><a class="sidebar-link" href="#dashboard"><span>Dashboard</span></a></li>
-                            <li class="menu-item"><a class="sidebar-link" href="#masternode-list"><span>Masternode List</span></a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
+        </div>
     </nav>
 
 <!-- Page Content BEGIN -->
@@ -188,16 +184,16 @@
                     <div class="row">
                         <div class="version-info">
                             <div class="col-sm-3">
-                                <p><b class="dashboard-text">Masternode version:</b> <span class="information-label-value" id="version-masternode">- </span></p>
+                                <p><span class="dashboard-text">Masternode version:</span> <span class="information-label-value" id="version-masternode">- </span></p>
                             </div>
                             <div class="col-sm-3">
-                                <p><b class="dashboard-text">Wallet version:</b> <span class="information-label-value" id="version-wallet">- </span></p>
+                                <p><span class="dashboard-text">Wallet version:</span> <span class="information-label-value" id="version-wallet">- </span></p>
                             </div>
                             <div class="col-sm-3">
-                                <p><b class="dashboard-text">Api version:</b> <span class="information-label-value" id="version-api">- </span></p>
+                                <p><span class="dashboard-text">Api version:</span> <span class="information-label-value" id="version-api">- </span></p>
                             </div>
                             <div class="col-sm-3">
-                                <p><b class="dashboard-text">Protocol version:</b> <span class="information-label-value" id="version-protocol">- </span></p>
+                                <p><span class="dashboard-text">Protocol version:</span> <span class="information-label-value" id="version-protocol">- </span></p>
                             </div>
                         </div>
                     </div>
@@ -206,7 +202,7 @@
                         <div class="col-md-3">
                             <div class="vertical-line"></div>                            
                             <div class="dashboard-section">
-                                <h3 class="dashboard-text dashboard-text-client text-left"><i class="zmdi zmdi-accounts-alt"></i> Client Status</h3>
+                                <span class="dashboard-text-title dashboard-text-client text-left"><i class="zmdi zmdi-accounts-alt"></i> Client Status</span>
                                 <div class="col-xl-12 text-center">
                                     <div class="percent-chart">
                                         <canvas id="percent-chart"></canvas>
@@ -237,7 +233,7 @@
                         <div class="col-md-3">
                             <div class="vertical-line"></div>                            
                             <div class="dashboard-section">
-                                <h3 class="dashboard-text"><i class="zmdi zmdi-dns"></i> Masternode<span class="information-label-value" id="masternode-ip"> </span> information</h3>
+                                <span class="dashboard-text-title"><i class="zmdi zmdi-dns"></i> MN<span class="information-label-value" id="masternode-ip"> </span> information</span>
                                 <p><b class="dashboard-text">Status:</b> <span class="information-label-value" id="masternode-status-tab">- </span></p>
                                 <p class="no-overflow"><b class="dashboard-text">Payee address:</b> <span class="information-label-value" id="masternode-payee"> -</span></p>
                                 <p class="no-overflow"><b class="dashboard-text">Signing key:</b> <span class="information-label-value" id="masternode-signing-key">- </span></p>
@@ -247,7 +243,7 @@
                         <div class="col-md-3">
                             <div class="vertical-line"></div>                            
                             <div class="dashboard-section">
-                                <h3 class="dashboard-text"><i class="zmdi zmdi-share"></i> d-VPN information</h3>
+                                <span class="dashboard-text-title"><i class="zmdi zmdi-share"></i> d-VPN information</span>
                                 <p><b class="dashboard-text">Service status:</b> <span class="information-label-value" id="dvpn-status-tab">- </span></p>
                                 <p><b class="dashboard-text">Server state:</b> <span class="information-label-value" id="dvpn-server-state">- </span></p>
                                 <p><b class="dashboard-text">Server version:</b> <span class="information-label-value" id="dvpn-server-version">- </span></p>
@@ -256,7 +252,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="dashboard-section">
-                                <h3 class="dashboard-text"><i class="zmdi zmdi-chart"></i> Traffic stats</h3>
+                                <span class="dashboard-text-title"><i class="zmdi zmdi-chart"></i> Traffic stats</span>
                                 <p><b class="dashboard-text">Sent daily:</b><span class="information-label-value" id="dvpn-traffic-sent-daily">- </span></p>
                                 <p><b class="dashboard-text">Received daily:</b><span class="information-label-value convert-bytes" id="dvpn-traffic-received-daily">- </span></p>
                                 <p><b class="dashboard-text">Sent hourly:</b><span class="information-label-value" id="dvpn-traffic-sent-hourly">- </span></p>
@@ -266,33 +262,33 @@
                         </div>
 
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="vertical-line"></div>                            
                             <div class="dashboard-section">
-                                <h3 class="dashboard-text"><i class="zmdi zmdi-layers"></i> Blockchain information</h3>
-                                <p><b class="dashboard-text">Nodes connected:</b> <span class="information-label-value" id="blockchain-connections"> </span></p>
-                                <p><b class="dashboard-text">Latest block:</b> <span class="information-label-value" id="blockchain-latest-block"> </span></p>
-                                <p><b class="dashboard-text">Minimum tx fee:</b> <span class="information-label-value" id="blockchain-mininmum-fee"> </span> vlsats</p>
-                                <p class="no-overflow"><b class="dashboard-text">Best blockhash:</b> <span class="information-label-value no-overflow" id="blockchain-best-blockhash"> </span></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="vertical-line"></div>                            
-                            <div class="dashboard-section">
-                                <h3 class="dashboard-text"> Halving information</h3>
-                                <p><b class="dashboard-text">Halving supply reached:</b> <span class="information-label-value" id="blockchain-halving-reached"> </span> out of 80%</p>
-                                <p><b class="dashboard-text">Already halved:</b> <span class="information-label-value" id="blockchain-halving-happend"> </span> times</p>
-                                <p><b class="dashboard-text">Blocks to next halving:</b> <span class="information-label-value" id="blockchain-nex-halving"> </span></p>
+                                <span class="dashboard-text-title"><i class="zmdi zmdi-layers"></i> Blockchain information</span>
+                                <div class="section-flex">
+                                    <div class="col-sm-6">
+                                        <p><b class="dashboard-text">Nodes connected:</b> <span class="information-label-value" id="blockchain-connections"> </span></p>
+                                        <p><b class="dashboard-text">Latest block:</b> <span class="information-label-value" id="blockchain-latest-block"> </span></p>
+                                        <p><b class="dashboard-text">Minimum tx fee:</b> <span class="information-label-value" id="blockchain-mininmum-fee"> </span> vlsats</p>
+                                        <p class="no-overflow"><b class="dashboard-text">Best blockhash:</b> <span class="information-label-value no-overflow" id="blockchain-best-blockhash"> </span></p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b class="dashboard-text">Halving supply reached:</b> <span class="information-label-value" id="blockchain-halving-reached"> </span> out of 80%</p>
+                                        <p><b class="dashboard-text">Already halved:</b> <span class="information-label-value" id="blockchain-halving-happend"> </span> times</p>
+                                        <p><b class="dashboard-text">Blocks to next halving:</b> <span class="information-label-value" id="blockchain-nex-halving"> </span></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="dashboard-section">
-                                <h3 class="dashboard-text"><i class="zmdi zmdi-border-color"></i> Service description: </h3>
+                                <span class="dashboard-text-title"><i class="zmdi zmdi-border-color"></i> Service description: </span>
                                 <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus orci odio. Vestibulum congue elit ipsum, non consequat lacus finibus nec. Proin porttitor eget purus eget suscipit. Cras vulputate sollicitudin tristique. Sed blandit, urna at ullamcorper malesuada, mauris justo pulvinar enim, ut molestie nibh est quis ligula. Etiam tempor, purus.</span>
                             </div>
                         </div>
                     </div>
-                    <br></br>
+                    <br>
                     <div class="row-grey">
                         <div class="tomottoWrap text-center" id="tomotto"><b> Veles Core Masternode Dashboard v0.0.02
                         </b></div>
