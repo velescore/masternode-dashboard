@@ -13,13 +13,13 @@
 
     // Either connect to API of current host where dashboard is running,
     // or fetch random MN information when developing on localhost
-    if (document.location.host == 'localhost' || document.location.host.indexOf('.github.io')) {
-        var URL = $.getJSON('https://explorer.veles.network/dapi/status');
-    } else {
+    //if (document.location.host == 'localhost' || document.location.host.indexOf('.github.io')) {
+    //    var URL = $.getJSON('https://explorer.veles.network/dapi/status');
+    //} else {
         var URL = $.getJSON(
-            document.location.protocol + '://' + document.location.host + '/api/status'
+            /*document.location.protocol + */'https://' + document.location.host + '/api/status'
             );
-    }
+    //}
 
     function SleepTillUpdateValues(time) {
         return new Promise((resolve) => setInterval(resolve, time));
